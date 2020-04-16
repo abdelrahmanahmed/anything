@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import Categories from './Categories';
+import Categories from './data/Categories.json';
+import Btn from './components/Btn';
+import { getRandomCategory } from './helpers';
 
-import Btn from './btn';
-import './tag.css'
+import './styles/App.css';
+import './styles/Tag.css';
 
 function App() {
+  const [categories, setCategories] = useState({});
   const [category, setCategory] = useState("games");
   const [result, setResult] = useState(null);
-  const [loaded, setLoaded] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Fetch Categories data on component initialization
+  useEffect(() => {
+    setCategories(Categories);
+  }, []);
 
   useEffect(() => {
     setCategory(category)
@@ -20,43 +26,37 @@ function App() {
   }
 
   const handleClickMe = () => {
-    setLoaded(false);
-    let selectedCategory = Categories[category];
-    let randomIndex = Math.floor(Math.random() * Math.floor(selectedCategory.length));
-    console.log(selectedCategory[randomIndex]);
-    setResult(selectedCategory[randomIndex])
-    setLoaded(true);
+    setIsLoading(true);
+    let selectedCategory = categories[category];
+    setResult(getRandomCategory(selectedCategory, result))
   }
   return (
     <div className="App">
       <div id="categories-container">
-        {Object.keys(Categories).map(e => (
+        {Object.keys(categories).map(e => (
           <span onClick={() => { handleCategory(e) }} key={e} className={category === e ? "tag active" : "tag"}> {e}</span>
         )
         )}
       </div>
 
-      <Btn value="Click Me" onClick={handleClickMe} disabled={loaded} />
-      {result && loaded ?
-        (
-          <div className="result">
-            <div className="card">
+      <Btn value={isLoading ? "Loading..." : "Click Me"} onClick={handleClickMe} disabled={isLoading} />
+      {result ?
+        <div className="result">
+          <div className="card">
+            {isLoading ? <div className="lds-hourglass"></div> :
               <div className="container">
                 <h4><b>{result.name}</b></h4>
               </div>
-   
-              <img
-                // style={setLoaded ? {} : { display: 'none' }}
-                onLoad={() => {console.log("WTF");setLoaded(true)}}
-                src={result.url} alt={result.name} />
+            }
 
-            </div>
+            <img
+              style={isLoading ? { display: 'none' } : {}}
+              onLoad={() => { setIsLoading(false) }}
+              src={result.url} alt={result.name} />
           </div>
-        )
-        : null
-      }
 
-
+        </div>
+        : null}
     </div>
   );
 }

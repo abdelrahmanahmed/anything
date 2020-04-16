@@ -1,11 +1,11 @@
-import React from 'react'; 
+import React from 'react';
 import PropTypes from 'prop-types';
-import './btn.css';
+import '../styles/Btn.css';
 
-const Btn = ({ value, onClick }) => {
+const Btn = ({ value, onClick, ...otherProps }) => {
     return (
         <div>
-            <button onClick={onClick} className="button">
+            <button onClick={onClick} className="button"{...otherProps}>
                 {value}
             </button>
         </div>
