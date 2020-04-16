@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Categories from './data/Categories.json';
 import Btn from './components/Btn';
 import { getRandomCategory } from './helpers';
-
-
 import './styles/App.css';
-import './styles/Tag.css';
 
 function App() {
   const [categories, setCategories] = useState({});

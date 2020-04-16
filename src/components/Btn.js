@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Btn.css';
 
 const Btn = ({ value, onClick, ...otherProps }) => {
     return (
