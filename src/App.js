@@ -3,6 +3,7 @@ import Categories from './data/Categories.json';
 import Btn from './components/Btn';
 import { getRandomCategory } from './helpers';
 
+
 import './styles/App.css';
 import './styles/Tag.css';
 
@@ -27,14 +28,17 @@ function App() {
 
   const handleClickMe = () => {
     setIsLoading(true);
-    let selectedCategory = categories[category];
+    let selectedCategory = categories[category].list;
     setResult(getRandomCategory(selectedCategory, result))
   }
   return (
     <div className="App">
+      <h1 id="title">Bored? &#128580; see what you can do now</h1>
       <div id="categories-container">
         {Object.keys(categories).map(e => (
-          <span onClick={() => { handleCategory(e) }} key={e} className={category === e ? "tag active" : "tag"}> {e}</span>
+          <span onClick={() => { handleCategory(e) }} key={e} className={category === e ? "tag active" : "tag"}>
+            {categories[e].label} {categories[e].emoji}
+          </span>
         )
         )}
       </div>

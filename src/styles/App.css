@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+#title{
+  text-align: center;
+}
+
 /*loader*/
 .lds-hourglass {
   display: inline-block;

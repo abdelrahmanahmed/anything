@@ -1,70 +1,80 @@
- {
-    "games": [
-        {
-            "name": "God of War",
-            "url": "https://psmedia.playstation.com/is/image/psmedia/god-of-war-narrative-screen-04-ps4-eu-23jan18?$MediaCarousel_Original$"
-        },
-        {
-            "name": "Uno",
-            "url": "https://steamcdn-a.akamaihd.net/steam/apps/470220/header.jpg?t=1573768701"
-        },
-        {
-            "name": "Puzzle",
-            "url": "https://www.printworksmarket.com/thumb/2905/1024x0/pussel_dusk_closeup.jpg"
-        },
-        {
-            "name": "Connect 4",
-            "url": "https://ae01.alicdn.com/kf/HTB1B_mUX4rvK1RjSszeq6yObFXaa/Connect-4-Game-Foldable-Montessoro-Educational-Kids-Math-Toys-for-Children-Line-Up-Row-Board-Funny.jpg"
-        },
-        {
-            "name": "Monopoly",
-            "url": "https://images-na.ssl-images-amazon.com/images/I/81m0JAjUbbL._AC_SX679_.jpg"
-        }
-    ],
-    "food": [
-        {
-            "name": "Lazania",
-            "url": "https://kfoods.com/images1/newrecipeicon/Beef-Lazania_322.jpg"
-        },
-        {
-            "name": "Pizza",
-            "url": "https://www.pishi.co.ke/wp-content/uploads/2020/02/pizza_categoryheader.png"
-        },
-        {
-            "name": "Burgar",
-            "url": "https://www.freshstore.pk//Content/Products/ProductImages/13960/Karizma-burgar-with-coke-&-fries1.jpg"
-        },
-        {
-            "name": "Shawarma",
-            "url": "https://www.ndtv.com/cooks/images/shawarma%20new.jpg"
-        },
-        {
-            "name": "Pasta white sauce",
-            "url": "https://all-recipes.us/wp-content/uploads/2019/04/White-Sauce-Pasta-Recipe.jpg"
-        },
-        {
-            "name": "Pasta red sauce",
-            "url": "https://assets.myfoodandfamily.com/adaptivemedia/rendition/206197_3000x2000.jpg?id=03735121263a1d9cceac4325dc79a75212491fd8&ht=650&wd=1004&version=1&clid=pim"
-        },
-        {
-            "name": "Sea food",
-            "url": "https://media-cdn.tripadvisor.com/media/photo-s/18/3a/09/6c/bonefish-seafood-platter.jpg"
-        },
-        {
-            "name": "Mix Grill",
-            "url": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/84fdb439-8072-4b08-9697-eb3f9bbc7196.jpg"
-        }
-
-
-    ],
-    "movies": [
-        {
-            "name": "Iron Man",
-            "url": "https://upload.wikimedia.org/wikipedia/en/0/00/Iron_Man_poster.jpg"
-        },
-        {
-            "name": "1917",
-            "url": "https://upload.wikimedia.org/wikipedia/en/7/7a/1917poster.jpg"
-        }
-    ]
+{
+    "games": {
+        "label":"Play game?",
+        "emoji": "🎮",
+        "list": [
+            {
+                "name": "God of War",
+                "url": "https://psmedia.playstation.com/is/image/psmedia/god-of-war-narrative-screen-04-ps4-eu-23jan18?$MediaCarousel_Original$"
+            },
+            {
+                "name": "Uno",
+                "url": "https://steamcdn-a.akamaihd.net/steam/apps/470220/header.jpg?t=1573768701"
+            },
+            {
+                "name": "Puzzle",
+                "url": "https://www.printworksmarket.com/thumb/2905/1024x0/pussel_dusk_closeup.jpg"
+            },
+            {
+                "name": "Connect 4",
+                "url": "https://ae01.alicdn.com/kf/HTB1B_mUX4rvK1RjSszeq6yObFXaa/Connect-4-Game-Foldable-Montessoro-Educational-Kids-Math-Toys-for-Children-Line-Up-Row-Board-Funny.jpg"
+            },
+            {
+                "name": "Monopoly",
+                "url": "https://images-na.ssl-images-amazon.com/images/I/81m0JAjUbbL._AC_SX679_.jpg"
+            }
+        ]
+    },
+    "food": {
+        "label":"Never stop eating",
+        "emoji": "🍔",
+        "list": [
+            {
+                "name": "Lazania",
+                "url": "https://kfoods.com/images1/newrecipeicon/Beef-Lazania_322.jpg"
+            },
+            {
+                "name": "Pizza",
+                "url": "https://www.pishi.co.ke/wp-content/uploads/2020/02/pizza_categoryheader.png"
+            },
+            {
+                "name": "Burgar",
+                "url": "https://www.freshstore.pk//Content/Products/ProductImages/13960/Karizma-burgar-with-coke-&-fries1.jpg"
+            },
+            {
+                "name": "Shawarma",
+                "url": "https://www.ndtv.com/cooks/images/shawarma%20new.jpg"
+            },
+            {
+                "name": "Pasta white sauce",
+                "url": "https://all-recipes.us/wp-content/uploads/2019/04/White-Sauce-Pasta-Recipe.jpg"
+            },
+            {
+                "name": "Pasta red sauce",
+                "url": "https://assets.myfoodandfamily.com/adaptivemedia/rendition/206197_3000x2000.jpg?id=03735121263a1d9cceac4325dc79a75212491fd8&ht=650&wd=1004&version=1&clid=pim"
+            },
+            {
+                "name": "Sea food",
+                "url": "https://media-cdn.tripadvisor.com/media/photo-s/18/3a/09/6c/bonefish-seafood-platter.jpg"
+            },
+            {
+                "name": "Mix Grill",
+                "url": "https://s3-eu-west-1.amazonaws.com/elmenusv5-stg/Normal/84fdb439-8072-4b08-9697-eb3f9bbc7196.jpg"
+            }
+        ]
+    },
+    "movies": {
+        "label":"Next move?",
+        "emoji": "🎬",
+        "list": [
+            {
+                "name": "Iron Man",
+                "url": "https://upload.wikimedia.org/wikipedia/en/0/00/Iron_Man_poster.jpg"
+            },
+            {
+                "name": "1917",
+                "url": "https://upload.wikimedia.org/wikipedia/en/7/7a/1917poster.jpg"
+            }
+        ]
+    }
 }

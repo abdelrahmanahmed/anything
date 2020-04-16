@@ -13,6 +13,7 @@
     width:20%;
     margin :10px;
     line-height: 75px;
+    font-size: 22px;
 }
 .active{
     background-color:#fff086;
