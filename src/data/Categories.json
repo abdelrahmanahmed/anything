@@ -64,7 +64,7 @@
         ]
     },
     "movies": {
-        "label":"Next move?",
+        "label":"Next Movie?",
         "emoji": "🎬",
         "list": [
             {
