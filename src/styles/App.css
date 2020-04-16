@@ -148,3 +148,13 @@ code {
 .result img{
   width:100%;
 }
+
+@media only screen and (max-width: 600px) {
+  #categories-container{
+    flex-direction: column;
+  }
+  #categories-container .tag{
+    width: 50%;
+    margin: 20px auto
+  }
+}
