@@ -2,18 +2,13 @@ import React, { useState, useEffect } from 'react'
 import Categories from './data/Categories.json'
 import Btn from './components/Btn'
 import { getRandomCategory } from './helpers'
-import './styles/App.css'
+import './styles/App.scss'
 
 function App() {
-  const [categories, setCategories] = useState({})
+  const [categories] = useState(Categories)
   const [category, setCategory] = useState('games')
   const [result, setResult] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-
-  // Fetch Categories data on component initialization
-  useEffect(() => {
-    setCategories(Categories)
-  }, [])
 
   useEffect(() => {
     setCategory(category)
@@ -30,7 +25,13 @@ function App() {
   }
   return (
     <div className="App">
-      <h1 id="title">Bored? &#128580; see what you can do now</h1>
+      <h1 id="title">
+        Bored?{' '}
+        <span role="img" aria-label="emoji">
+          &#128580;
+        </span>{' '}
+        see what you can do now
+      </h1>
       <div id="categories-container">
         {Object.keys(categories).map((e) => (
           <span
@@ -54,7 +55,7 @@ function App() {
         <div className="result">
           <div className="card">
             {isLoading ? (
-              <div className="lds-hourglass"></div>
+              <div className="lds-hourglass" />
             ) : (
               <div className="container">
                 <h4>
