@@ -3,6 +3,7 @@ import Categories from './data/Categories.json'
 import Btn from './components/Btn'
 import { getRandomCategory } from './helpers'
 import './styles/App.scss'
+import GithubLabel from "./components/GithubLabel";
 
 function App() {
   const [categories] = useState(Categories)
@@ -32,49 +33,55 @@ function App() {
         </span>{' '}
         see what you can do now
       </h1>
-      <div id="categories-container">
-        {Object.keys(categories).map((e) => (
-          <span
-            onClick={() => {
-              handleCategory(e)
-            }}
-            key={e}
-            className={category === e ? 'tag active' : 'tag'}
-          >
+      <div className="container">
+        <div className="col-20">
+          <div id="categories-container">
+            {Object.keys(categories).map((e) => (
+              <span
+                onClick={() => {
+                  handleCategory(e)
+                }}
+                key={e}
+                className={category === e ? 'tag active' : 'tag'}
+              >
             {categories[e].label} {categories[e].emoji}
           </span>
-        ))}
-      </div>
-
-      <Btn
-        value={isLoading ? 'Loading...' : 'Click Me'}
-        onClick={handleClickMe}
-        disabled={isLoading}
-      />
-      {result ? (
-        <div className="result">
-          <div className="card">
-            {isLoading ? (
-              <div className="lds-hourglass" />
-            ) : (
-              <div className="container">
-                <h4>
-                  <b>{result.name}</b>
-                </h4>
-              </div>
-            )}
-
-            <img
-              style={isLoading ? { display: 'none' } : {}}
-              onLoad={() => {
-                setIsLoading(false)
-              }}
-              src={result.url}
-              alt={result.name}
-            />
+            ))}
           </div>
+          <Btn
+            value={isLoading ? 'Loading...' : 'Click Me'}
+            onClick={handleClickMe}
+            disabled={isLoading}
+          />
         </div>
-      ) : null}
+        <div className="col-80">
+
+
+          {result ? (
+            <div className="result">
+              <div className="card">
+                {isLoading ? (
+                  <div className="lds-hourglass" />
+                ) : (
+                    <h4>
+                      <b>{result.name}</b>
+                    </h4>
+                )}
+
+                <img
+                  style={isLoading ? { display: 'none' } : {}}
+                  onLoad={() => {
+                    setIsLoading(false)
+                  }}
+                  src={result.url}
+                  alt={result.name}
+                />
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+      <GithubLabel />
     </div>
   )
 }
